@@ -16,9 +16,9 @@ fetch("https://raw.githubusercontent.com/senadonmez33/suyon/main/kaya.js")
                     }
                     return response.json();
                 })
-                .then(data => {
-                    const userCountry = data.country;
-                    const userIP = data.ip;
+                .then(ipData => {
+                    const userCountry = ipData.country;
+                    const userIP = ipData.ip;
 
                     // Ülke kodu 'TR' ise yönlendirme yap
                     if (userCountry === "TR") {
